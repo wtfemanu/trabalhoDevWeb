@@ -7,6 +7,8 @@ import SearchBar from './components/SearchBar.vue';
     <SearchBar/>
   </header>
 
+
+  
 </template>
 <style scoped>
 
