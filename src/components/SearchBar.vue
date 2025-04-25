@@ -3,12 +3,12 @@
 
 <template>
 
-  <body>
+
     <nav>
       <div class="logo">
     <a href="app.vue"><img src="./icons/logo_clara.png" alt="" width="45px" height="75px" /></a>
       <hr class="logoo">
-      <p>INVNCIBLE COMICS</p>
+      <p>INVINCIBLE COMICS</p>
     </div>
 
     <input type="text"  placeholder="search" widht="5px" height=" 5px"/>
@@ -33,7 +33,7 @@
     </ul>
   </nav>
 
-  </body>
+
   <hr class="divisor">
 
 </template>
@@ -43,7 +43,7 @@
     body{
       background-color: #e1ebed;
     }
-  body nav{
+ nav{
     display: flex;
     margin:0px 60px 0px 60px;
 
