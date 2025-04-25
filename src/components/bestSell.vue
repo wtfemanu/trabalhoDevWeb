@@ -45,7 +45,6 @@ import { ref } from 'vue';
   padding: 15px;
 
  }
- img.livroMaisVendido
 
 
 </style>
