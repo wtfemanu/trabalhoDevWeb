@@ -6,7 +6,7 @@
 
     <nav>
       <div class="logo">
-    <a href="app.vue"><img src="./public/imagens/logo_clara.png" alt="" width="45px" height="75px" /></a>
+    <a href="app.vue"><img src="./icons/logo_clara.png" alt="" width="45px" height="75px" /></a>
       <hr class="logoo">
       <p>INVINCIBLE COMICS</p>
     </div>
