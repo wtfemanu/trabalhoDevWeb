@@ -115,8 +115,8 @@
     height: 45px;
   }
   hr.divisor{
-    width: 2500px;
-  
+    width: 1397px;
+
   }
   hr.divisinho{
     height: 20px;
