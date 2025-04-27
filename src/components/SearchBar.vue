@@ -103,6 +103,8 @@
   hr {
     color: 	#c8412d;
     border:  solid 1px	#c8412d;
+    max-width: 100%;
+    margin: 0;
 
 
   }
@@ -114,6 +116,7 @@
   }
   hr.divisor{
     width: 2500px;
+  
   }
   hr.divisinho{
     height: 20px;

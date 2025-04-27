@@ -9,6 +9,7 @@ import bestSell from './components/bestSell.vue';
     <SearchBar/>
   </header>
   <bestSell/>
+  <hr>
 
 
 
