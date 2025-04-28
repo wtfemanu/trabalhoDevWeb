@@ -1,4 +1,4 @@
-<script>
+<script setup>
 </script>
 
 <template>
@@ -45,7 +45,7 @@
     }
  nav{
     display: flex;
-    margin:0px 60px 0px 60px;
+    margin:0px 8vw 0px 8vw;
 
   }
   div.logo{
@@ -103,6 +103,8 @@
   hr {
     color: 	#c8412d;
     border:  solid 1px	#c8412d;
+    max-width: 100%;
+    margin: 0;
 
 
   }
@@ -113,7 +115,8 @@
     height: 45px;
   }
   hr.divisor{
-    width: 2500px;
+    width: 100vw;
+
   }
   hr.divisinho{
     height: 20px;
