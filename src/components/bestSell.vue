@@ -19,8 +19,8 @@
     </div>
 
     <div class="imagens">
-      <img class="livroMaisVendido" src="/public/image/hq144.jpg" width="360px" height="530" />
-      <img class="sobreposta" src="/public/image/bestvenda.png" width="140px" height="150px" />
+      <img class="livroMaisVendido" src="/public/image/hq144.jpg" width="360vw" height="530vw" />
+      <img class="sobreposta" src="/public/image/bestvenda.png" width= 180vw; height= 180vw; />
     </div>
   </section>
 </template>
@@ -39,6 +39,7 @@ h1 {
 p.resumo {
   margin: 2vw 3vw 3vw 3vw;
   width: 90%;
+  max-width: 90%;
   font-size: 1.8vw;
   color: #4d4c4c;
 }
@@ -52,17 +53,18 @@ img.livroMaisVendido {
 }
 img.sobreposta {
   position: absolute;
-  top: 345px;
-  right: 245px;
-  width: 180px;
-  height: 180px;
+  top: 10vw;
+  right: 6vw;
+  width: 320px;
+  height: 320px;
 }
 a.piscando {
-  margin-left: 450px;
+  margin-left: 38vw;
   background-color: #c8412d;
-  padding: 12px 15px 12px 15px;
+  padding: 1vw 1.5vw 1vw 1.5vw;
   border: none;
   color: #e1ebed;
   text-decoration: none;
+  font-size: 1vw;
 }
 </style>

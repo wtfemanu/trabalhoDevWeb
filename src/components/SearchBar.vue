@@ -45,7 +45,7 @@
     }
  nav{
     display: flex;
-    margin:0px 60px 0px 60px;
+    margin:0px 8vw 0px 8vw;
 
   }
   div.logo{
@@ -115,7 +115,7 @@
     height: 45px;
   }
   hr.divisor{
-    width: 1397px;
+    width: 100vw;
 
   }
   hr.divisinho{
