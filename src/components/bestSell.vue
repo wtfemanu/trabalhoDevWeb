@@ -1,70 +1,68 @@
 <script setup></script>
 <template>
-  <section class="melhorVenda">
-    <div class="escrita">
-      <h1>O Fim de Tudo</h1>
-
-      <p class="resumo">
-        Essa edição conclui a gigantesca saga de Mark Grayson. Após anos de batalhas, perdas,
-        reviravoltas e crescimento, vemos Mark como um homem totalmente diferente daquele jovem
-        herói do começo da série. Agora ele está lidando com responsabilidades em escala
-        intergaláctica, não só como super-herói, mas também como líder, pai e símbolo de esperança
-        para muitos.
+  <div class="main1">
+    <div class="left">
+      <div class="buttonOne"></div>
+      <h1>The end of all things</h1>
+      <p>
+        Essa edição conclui a gigantesca saga de Mark Grayson. Após anos de batalhas, perdas, reviravoltas e crescimento, vemos Mark como um homem totalmente diferente daquele jovem herói do começo da série. Agora ele está lidando com responsabilidades em escala intergaláctica, não só como super-herói, mas também como líder, pai e símbolo de esperança para muitos.
       </p>
-      <a
-        href="https://www.amazon.com.br/Invincible-144-English-Robert-Kirkman-ebook/dp/B076HZQJHC"
-        class="piscando"
-        >Compre já!</a
-      >
+      <div class="buttonTwo"><a href="#">Acessar página do livro</a></div>
     </div>
-
-    <div class="imagens">
-      <img class="livroMaisVendido" src="/public/image/hq144.jpg" width="360vw" height="530vw" />
-      <img class="sobreposta" src="/public/image/bestvenda.png" width= 180vw; height= 180vw; />
-    </div>
-  </section>
+    <div class="right"><img src="/public/image/hq144.jpg" alt="HQ" /></div>
+  </div>
 </template>
-
 <style>
-.melhorVenda {
+.main1 {
+  height: 70vh;
+  width: auto;
+  padding: 160px 100px;
+  gap: 50px;
   display: flex;
-  margin: 2vw 10vw 2vw 10vw;
+  background-color: var(--invincible-black);
+  color: var(--invincible-white);
+  font-family: 'Roboto';
+  border-bottom: solid 1px var(--invincible-yellow);
 }
-
-h1 {
-  margin: 2vw 1.6vw 2vw 1.6vw;
-  font-size: 2.8vw;
-  color: #252525;
+.main1 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  gap: 5px;
+  padding: 50px 0;
 }
-p.resumo {
-  margin: 2vw 3vw 3vw 3vw;
-  width: 90%;
-  max-width: 90%;
-  font-size: 1.8vw;
-  color: #4d4c4c;
+.main1 .left h1 {
+  font-family: var(--font-roboto);
+  font-size: 50px;
 }
-.imagens {
-  position: relative;
-  margin-top: 1.7vw;
+.main1 .left p {
+  font-size: 24px;
 }
-img.livroMaisVendido {
-  margin: 0 4vw 0 4vw;
-  object-fit: cover;
-}
-img.sobreposta {
-  position: absolute;
-  top: 10vw;
-  right: 6vw;
-  width: 320px;
-  height: 320px;
-}
-a.piscando {
-  margin-left: 38vw;
-  background-color: #c8412d;
-  padding: 1vw 1.5vw 1vw 1.5vw;
-  border: none;
-  color: #e1ebed;
+.main1 .buttonOne a {
+  padding: 10px 20px;
+  color: var(--invincible-yellow);
   text-decoration: none;
-  font-size: 1vw;
+  border: 1px solid;
+  transition: 0.5s ease-in-out;
+}
+.main1 .buttonOne a:hover {
+  color: var(--invincible-blue);
+}
+.main1 .buttonTwo a {
+  padding: 10px 20px;
+  color: var(--invincible-yellow);
+  text-decoration: none;
+  border: 1px solid;
+  transition: 0.5s ease-in-out;
+}
+.main1 .buttonTwo a:hover {
+  color: var(--invincible-blue);
+}
+.main1 .right {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  height: 100%;
 }
 </style>
