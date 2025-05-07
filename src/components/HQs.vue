@@ -1,44 +1,94 @@
+<script>
+   export default {
+      name: "ListaDeLivros",
+        data() {
+            return {
+            produtos :[
+  {
+      id: 1,
+      titulo: 'HQ 1',
+      empresa: 'Invincible Comics',
+      preco: 29.90,
+      imagem: 'public/image/hq1.jpg',
+
+
+  },
+  {
+      id: 2,
+      titulo: 'HQ 32',
+      empresa: 'Invincible Comics',
+      preco: 29.90,
+      imagem:'public/image/hq32.jpg',
+
+  },
+  {
+      id: 3,
+      titulo: 'HQ 50',
+      empresa: 'Invincible Comics',
+      preco: 29.90,
+      imagem:'public/image/hq50.jpg',
+
+  },
+  {
+      id: 4,
+      titulo: 'HQ 72' ,
+      empresa: 'Invincible Comics',
+      preco: 29.90,
+      imagem:'public/image/hq72.jpg',
+  },
+  {
+      id: 5,
+      titulo: 'HQ 86',
+      empresa: 'Invincible Comics',
+      preco: 29.90,
+      imagem:'public/image/hq86.jpg',
+
+  },
+  {
+    id: 6,
+    titulo: 'HQ 102',
+    empresa: 'Invincible Comics',
+    preco: 29.90,
+    imagem:'public/image/hq102.jpg',
+
+},
+{
+    id: 7,
+    titulo: 'HQ 129',
+    empresa: 'Invincible Comics',
+    preco: 29.90,
+    imagem:'public/image/hq129.jpg',
+
+},
+{
+    id: 8,
+    titulo: 'HQ 144',
+    empresa: 'Invincible Comics',
+    preco: 29.90,
+    imagem:'public/image/hq144.jpg',
+}
+      ]
+    };
+  }
+};
+</script>
+
 <template>
-  <link rel="stylesheet" href="/src/components/cart.js">
+  <link rel="stylesheet" href="/src/cart.js" />
 
-   <div class="main2">
-        <h1>HQs</h1>
-        <div class="cards" id="product-cards-1"></div>
-
-        <div class="cards2" id="product-cards-2"></div>
-        <!-- Cards são adicionados aqui -->
-      </div>
+  <div class="main2">
+    <h1>HQs</h1>
+    <ul>
+      <li v-for="produto in produtos" :key="produto.id">
+        <h2>{{produto.titulo}}</h2>
+        <p>{{produto.empresa}}</p>
+        <h3>{{produto.preco}}</h3>
+        <img :src="produto.imagem" alt="produto.titulo" width="100%" height="90%">
+      </li>
+    </ul>
+  </div>
 </template>
 <style>
-body,
-h1,
-p {
-    padding: 0;
-    margin: 0;
-    font-family: var(--font-nunito);
-}
-
-.header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    width: 100%;
-    background: linear-gradient(
-        to right,
-        var(--invincible-yellow) 0%,
-        var(--invincible-yellow) 25%,
-        var(--invincible-blue) 50%,
-        var(--invincible-yellow) 75%,
-        var(--invincible-yellow) 100%
-    );
-    background-size: 200% 100%;
-    background-repeat: repeat-x;
-    animation: borderFlow 6s linear infinite;
-}
-
-
 .main2 {
     display: flex;
     flex-direction: column;
@@ -150,64 +200,4 @@ p {
     flex: 1;
     gap: 10px;
 }
-.footer{
-    color: var(--invincible-black);
-    background-color: var(--invincible-yellow);
-}
-.footer a{
-    color: var(--invincible-black);
-}
-.footerUpper{
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 100px;
-    border-bottom: 1px solid var(--invincible-black);
-}
-.footerUpper span{
-        font-weight: 600;
-}
-.footerUpper .left{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-.footerUpper .left .social{
-    display: flex;
-    gap: 10px;
-}
-.footerUpper .left .social a{
-    font-size: 25px;
-}
-.footerUpper .right{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.footerLower{
-    display: flex;
-    justify-content: center;
-    padding: 25px 0;
-}
-@keyframes borderFlow {
-    0% {
-        background-position: 0% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
-}
-@keyframes pulseGlow {
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.4;
-        box-shadow: 0 0 30px 15px rgba(0, 153, 255, 0.2);
-    }
-
-    50% {
-        transform: scale(1.05);
-        opacity: 0.6;
-        box-shadow: 0 0 40px 20px rgba(0, 195, 255, 0.2);
-    }
-}</style>
+</style>

@@ -1,61 +1,61 @@
 // Lista de produtos
 const produtos = [
   {
-    id: 1,
-    nome: "Invincible Vol. 1",
-    descricao: "Invencible Comics",
-    preco: "27,90",
-    imagem: "/public/image/hq1.jpg"
+      id: 1,
+      titulo: 'HQ 1',
+      empresa: 'Invincible Comics',
+      preco: 29.9,
+
   },
   {
-    id: 2,
-    nome: "Invincible Vol. 2",
-    descricao: "Invencible Comics",
-    preco: "27,90",
-    imagem: "assets/hq2.jpeg"
+      id: 2,
+      titulo: 'HQ 32',
+      empresa: 'Invincible Comics',
+      preco: 29.9,
+
   },
   {
-    id: 3,
-    nome: "Invincible Vol. 3",
-    descricao: "Invencible Comics",
-    preco: "27,90",
-    imagem: "assets/hq3.jpeg"
+      id: 3,
+      titulo: 'HQ 50',
+      empresa: 'Invincible Comics',
+      preco: 29.9,
+
   },
   {
-    id: 4,
-    nome: "Invincible Vol. 4",
-    descricao: "Invencible Comics",
-    preco: "27,90",
-    imagem: "assets/hq4.jpeg"
+      id: 4,
+      titulo: 'HQ 72' ,
+      empresa: 'Invincible Comics',
+      preco: 29.9,
+
   },
   {
-    id: 5,
-    nome: "Invincible Vol. 5",
-    descricao: "Invencible Comics",
-    preco: "27,90",
-    imagem: "assets/hq5.jpeg"
+      id: 5,
+      titulo: 'HQ 86',
+      empresa: 'Invincible Comics',
+      preco: 29.9,
+
   },
   {
     id: 6,
-    nome: "Invincible Vol. 6",
-    descricao: "Invencible Comics",
-    preco: "27,90",
-    imagem: "assets/hq6.jpeg"
-  },
-  {
+    titulo: 'HQ 102',
+    empresa: 'Invincible Comics',
+    preco: 29.9,
+
+},
+{
     id: 7,
-    nome: "Invincible Vol. 7",
-    descricao: "Invencible Comics",
-    preco: "27,90",
-    imagem: "assets/hq7.jpeg"
-  },
-  {
+    titulo: 'HQ 129',
+    empresa: 'Invincible Comics',
+    preco: 29.,
+
+},
+{
     id: 8,
-    nome: "Invincible Vol. 8",
-    descricao: "Invencible Comics",
-    preco: "27,90",
-    imagem: "assets/hq8.jpeg"
-  }
+    titulo: 'HQ 144',
+    empresa: 'Invincible Comics',
+    preco: 199.9,
+
+},
 ];
 
 // Função para adicionar produto ao carrinho
