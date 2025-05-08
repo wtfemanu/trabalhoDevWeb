@@ -1,13 +1,13 @@
 <template>
   <div class="main2">
     <h1>HQs</h1>
-    <ul>
+    <ul class="hq-list">
       <li v-for="produto in produtos" :key="produto.id" class="hq-item">
         <img :src="produto.imagem" :alt="produto.titulo" width="200" height="300" />
         <h2>{{ produto.titulo }}</h2>
         <p>{{ produto.empresa }}</p>
         <h3>R$ {{ produto.preco.toFixed(2) }}</h3>
-        <button @click="adicionarAoCarrinho(produto)">Adicionar ao carrinho</button>
+        <button @click="adicionarAoCarrinho(produto)"><span><i class="fa-solid fa-cart-shopping"></i>Adicionar ao carrinho </span></button>
       </li>
     </ul>
   </div>
@@ -34,21 +34,18 @@ export default {
     adicionarAoCarrinho(produto) {
       let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-      // Verificar se o item já existe no carrinho
       const itemExistente = carrinho.find(item => item.id === produto.id);
       if (itemExistente) {
-        // Se já existe, apenas aumentar a quantidade
+
         itemExistente.quantidade += 1;
       } else {
-        // Caso contrário, adicionar o item com quantidade 1
+
         carrinho.push({ ...produto, quantidade: 1 });
       }
 
-      // Atualizar o carrinho no localStorage
+
       localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
-      // Feedback ao usuário
-      alert(`${produto.titulo} adicionado ao carrinho!`);
     }
   }
 };
@@ -56,10 +53,34 @@ export default {
 
 <style>
  /* deixei isso aq só pra ter uma ideia padrão de como ficaria os bgl alinhado*/
-  .main2 ul{
-    display: flex;
-    flex-wrap: wrap
-  }
+
+ .hq-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.hq-item {
+display: flex;
+flex-direction: column;
+  width: calc(25% - 20px);
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+.hq-item img{
+width: 100%;
+height: 90%;
+
+}
+.hq-item p{
+ color: #aaa;
+}
+
 
 
 .main2 {
@@ -96,46 +117,20 @@ export default {
     font-family: var(--font-roboto)
 }
 
-.main2 .cards {
-    display: flex;
-    gap: 50px;
-
-}
-
-.main2 .cards .card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 10px;
-}
-
-.card img {
-    width: 100%;
-    height: 90%
-}
-
-.card h2 {
-    margin: 0;
-}
-
-.card p {
-    color: #aaa;
-}
-
-.card a {
+.hq-item  button {
     position: relative;
     display: flex;
     justify-content: center;
     padding: 10px 20px;
+    background-color: var(--invincible-black);
     color: var(--invincible-yellow);
     text-decoration: none;
     border: 1px solid;
     overflow: hidden;
     transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
-    gap: 5px;
 }
 
-.card a::before {
+.hq-item button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -148,18 +143,20 @@ export default {
     transition: right 0.3s ease-in-out;
 }
 
-.card a:hover::before {
+.hq-item button:hover::before {
     right: 0;
 }
 
-.card a:hover {
+.hq-item button:hover {
     color: var(--invincible-black);
     border-color: var(--invincible-yellow);
 }
 
-.card a i,
-.card a span {
+.hq-item span, .hq-item span i{
+  display: flex;
+  gap: 5px;
     z-index: 1;
+    font-size: 18px;
 }
 
 .cards2 {
