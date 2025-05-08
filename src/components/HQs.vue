@@ -80,15 +80,24 @@
     <h1>HQs</h1>
     <ul>
       <li v-for="produto in produtos" :key="produto.id">
-        <h2>{{produto.titulo}}</h2>
+         <img :src="produto.imagem" alt="produto.titulo" width="200vw" height="300vw">
+         <h2>{{produto.titulo}}</h2>
         <p>{{produto.empresa}}</p>
         <h3>{{produto.preco}}</h3>
-        <img :src="produto.imagem" alt="produto.titulo" width="100%" height="90%">
+
       </li>
     </ul>
   </div>
 </template>
 <style>
+
+ /* deixei isso aq só pra ter uma ideia padrão de como ficaria os bgl alinhado*/
+  .main2 ul{
+    display: flex;
+    flex-wrap: wrap
+  }
+
+
 .main2 {
     display: flex;
     flex-direction: column;
