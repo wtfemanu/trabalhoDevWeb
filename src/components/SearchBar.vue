@@ -1,5 +1,6 @@
 <script setup>
 
+
 </script>
 
 <template>
@@ -19,7 +20,7 @@
             <li><a href="#">Devoluções</a></li>
           </ul>
           <div class="cart">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="Carrinho.vue"><i class="fa-solid fa-cart-shopping"></i></a>
           </div>
         </nav>
       </div>
