@@ -2,6 +2,7 @@
 import SearchBar from './components/SearchBar.vue';
 import bestSell from './components/bestSell.vue';
 import HQs from './components/HQs.vue';
+import rodape from './components/rodape.vue';
 </script>
 
 <template>
@@ -15,6 +16,8 @@ import HQs from './components/HQs.vue';
   <bestSell/>
 
   <HQs/>
+
+  <rodape/>
 
 
 
