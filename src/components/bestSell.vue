@@ -1,4 +1,32 @@
-<script setup></script>
+<script >
+
+  export default {
+  data() {
+    return {
+      images: [
+        'public/image/hq1.jpg',
+        'public/image/hq32.jpg',
+        'public/image/hq50.jpg',
+        'public/image/hq72.jpg',
+        'public/image/hq86.jpg',
+        'public/image/hq102.jpg',
+        'public/image/hq129.jpg',
+        'public/image/hq144.jpg',
+      ],
+      currentImage: ''
+    }
+  },
+  methods: {
+    trocarImagem() {
+      const indice = Math.floor(Math.random() * this.images.length)
+      this.currentImage = this.images[indice]
+    }
+  },
+  mounted() {
+    this.trocarImagem()
+  }
+}
+</script>
 <template>
     <div class="main1">
         <div class="left">
@@ -14,7 +42,7 @@
         </div>
         <div class="right">
           <div class="imgContainer">
-            <img src="/public/image/hq1.jpg" alt="HQ" />
+            <img :src="currentImage" alt="Imagem aleatória"/>
           </div>
         </div>
       </div>
