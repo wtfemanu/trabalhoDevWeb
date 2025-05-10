@@ -1,30 +1,36 @@
 <script setup>
 
-
 </script>
 
 <template>
- <div class="header">
-        <nav>
-          <div class="logo">
-            <img src="/src/components/icons/Logo.png" alt="logo" />
-          </div>
-          <div class="buscar">
-            <input type="text" placeholder="Pesquisar" />
-            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-          </div>
-          <ul>
-            <li><a href="#">Termos</a></li>
-            <li><a href="#">Envio</a></li>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="#">Devoluções</a></li>
-          </ul>
-          <div class="cart">
-            <a href="Carrinho.vue"><i class="fa-solid fa-cart-shopping"></i></a>
-          </div>
-        </nav>
+  <div class="header">
+    <nav>
+      <div class="logo">
+        <img src="/src/components/icons/Logo.png" alt="logo" />
       </div>
+
+      <div class="buscar">
+        <input type="text" placeholder="Pesquisar" />
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      </div>
+
+      <ul>
+        <li><a href="#">Termos</a></li>
+        <li><a href="#">Envio</a></li>
+        <li><router-link to="/">Início</router-link></li>
+        <li><a href="#">Devoluções</a></li>
+      </ul>
+
+      <div class="cart">
+        <router-link to="/carrinho">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </router-link>
+
+      </div>
+    </nav>
+  </div>
 </template>
+
 
 <style>
 :root{

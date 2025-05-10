@@ -1,38 +1,32 @@
-<script >
+<script setup>
+import { ref, onMounted } from 'vue'
 
-  export default {
-  data() {
-    return {
-      images: [
-        'public/image/hq1.jpg',
-        'public/image/hq32.jpg',
-        'public/image/hq50.jpg',
-        'public/image/hq72.jpg',
-        'public/image/hq86.jpg',
-        'public/image/hq102.jpg',
-        'public/image/hq129.jpg',
-        'public/image/hq144.jpg',
-      ],
-      currentImage: ''
-    }
-  },
-  methods: {
-    trocarImagem() {
-      const indice = Math.floor(Math.random() * this.images.length)
-      this.currentImage = this.images[indice]
-    }
-  },
-  mounted() {
-    this.trocarImagem()
-  }
+const images = [
+  '/image/hq1.jpg',
+  '/image/hq32.jpg',
+  '/image/hq50.jpg',
+  '/image/hq72.jpg',
+  '/image/hq86.jpg',
+  '/image/hq102.jpg',
+  '/image/hq129.jpg',
+  '/image/hq144.jpg'
+]
+
+const currentImage = ref('')
+
+const trocarImagem = () => {
+  const indice = Math.floor(Math.random() * images.length)
+  currentImage.value = images[indice]
 }
+
+onMounted(trocarImagem)
 </script>
 <template>
     <div class="main1">
         <div class="left">
-          <h1>Invincible: Ultimate Collection</h1>
+          <h1>Invencible: Ultimate Collection</h1>
           <p>
-            Na Invincible Comics, cada página conta uma história que vai além do comum. Explore um universo de heróis, vilões, reviravoltas e artes incríveis que fazem você mergulhar em novas realidades. Do clássico ao independente, temos a edição perfeita para cada tipo de leitor. Descubra sua próxima aventura aqui.
+            Na Invencible Comics, cada página conta uma história que vai além do comum. Explore um universo de heróis, vilões, reviravoltas e artes incríveis que fazem você mergulhar em novas realidades. Do clássico ao independente, temos a edição perfeita para cada tipo de leitor. Descubra sua próxima aventura aqui.
 
 
           </p>
