@@ -1,25 +1,10 @@
 <script setup>
-import SearchBar from './components/SearchBar.vue';
-import bestSell from './components/bestSell.vue';
-import HQs from './components/HQs.vue';
-import rodape from './components/rodape.vue';
-import Carrinho from './components/Carrinho.vue';
-
+import SearchBar from './components/SearchBar.vue'
 </script>
 
 <template>
-    <SearchBar/>
-  <bestSell/>
-  <HQs/>
-  <rodape/>
-  <Carrinho/>
-
-
-
-
-
-
+  <div id="app">
+    <SearchBar />
+    <router-view />
+  </div>
 </template>
-<style scoped>
-
-</style>

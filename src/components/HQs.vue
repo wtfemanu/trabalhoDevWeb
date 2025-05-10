@@ -1,3 +1,22 @@
+<script setup>
+import { ref } from 'vue'
+import { useCartStore } from '../stores/cartStore'
+
+
+const { adicionarAoCarrinho } = useCartStore()
+
+const produtos = ref([
+  { id: 1, titulo: 'HQ 1', empresa: 'Invincible Comics', preco: 29.90, imagem: '/image/hq1.jpg' },
+  { id: 2, titulo: 'HQ 32', empresa: 'Invincible Comics', preco: 29.90, imagem: '/image/hq32.jpg' },
+  { id: 3, titulo: 'HQ 50', empresa: 'Invincible Comics', preco: 29.90, imagem: '/image/hq50.jpg' },
+  { id: 4, titulo: 'HQ 72', empresa: 'Invincible Comics', preco: 29.90, imagem: '/image/hq72.jpg' },
+  { id: 5, titulo: 'HQ 86', empresa: 'Invincible Comics', preco: 29.90, imagem: '/image/hq86.jpg' },
+  { id: 6, titulo: 'HQ 102', empresa: 'Invincible Comics', preco: 29.90, imagem: '/image/hq102.jpg' },
+  { id: 7, titulo: 'HQ 129', empresa: 'Invincible Comics', preco: 29.90, imagem: '/image/hq129.jpg' },
+  { id: 8, titulo: 'HQ 144', empresa: 'Invincible Comics', preco: 29.90, imagem: '/image/hq144.jpg' }
+])
+</script>
+
 <template>
   <div class="main2">
     <h1>HQs</h1>
@@ -7,52 +26,18 @@
         <h2>{{ produto.titulo }}</h2>
         <p>{{ produto.empresa }}</p>
         <h3>R$ {{ produto.preco.toFixed(2) }}</h3>
-        <button @click="adicionarAoCarrinho(produto)"><span><i class="fa-solid fa-cart-shopping"></i>Adicionar ao carrinho </span></button>
+        <button @click="adicionarAoCarrinho(produto)">
+          <span><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</span>
+        </button>
       </li>
     </ul>
   </div>
 </template>
 
-<script>
-export default {
-  name: "ListaDeLivros",
-  data() {
-    return {
-      produtos: [
-        { id: 1, titulo: 'HQ 1', empresa: 'Invincible Comics', preco: 29.90, imagem: 'public/image/hq1.jpg' },
-        { id: 2, titulo: 'HQ 32', empresa: 'Invincible Comics', preco: 29.90, imagem: 'public/image/hq32.jpg' },
-        { id: 3, titulo: 'HQ 50', empresa: 'Invincible Comics', preco: 29.90, imagem: 'public/image/hq50.jpg' },
-        { id: 4, titulo: 'HQ 72', empresa: 'Invincible Comics', preco: 29.90, imagem: 'public/image/hq72.jpg' },
-        { id: 5, titulo: 'HQ 86', empresa: 'Invincible Comics', preco: 29.90, imagem: 'public/image/hq86.jpg' },
-        { id: 6, titulo: 'HQ 102', empresa: 'Invincible Comics', preco: 29.90, imagem: 'public/image/hq102.jpg' },
-        { id: 7, titulo: 'HQ 129', empresa: 'Invincible Comics', preco: 29.90, imagem: 'public/image/hq129.jpg' },
-        { id: 8, titulo: 'HQ 144', empresa: 'Invincible Comics', preco: 29.90, imagem: 'public/image/hq144.jpg' }
-      ]
-    };
-  },
-  methods: {
-    adicionarAoCarrinho(produto) {
-      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-      const itemExistente = carrinho.find(item => item.id === produto.id);
-      if (itemExistente) {
-
-        itemExistente.quantidade += 1;
-      } else {
-
-        carrinho.push({ ...produto, quantidade: 1 });
-      }
-
-
-      localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
-    }
-  }
-};
-</script>
 
 <style>
- /* deixei isso aq só pra ter uma ideia padrão de como ficaria os bgl alinhado*/
+
 
  .hq-list {
   display: flex;
@@ -92,7 +77,7 @@ height: 90%;
     color: var(--invincible-white);
     font-family: var(--font-roboto);
     position: relative;
-    overflow: hidden;
+    overflow: auto;
 
 }
 .main2::after{

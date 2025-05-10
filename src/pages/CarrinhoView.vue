@@ -1,18 +1,18 @@
 <script setup>
 import { onMounted } from 'vue'
-import SearchBar from './SearchBar.vue'
-import rodape from './rodape.vue'
-import cartStore from '../stores/cartStore.js'
-
+import rodape from '../components/rodape.vue'
+import { useCartStore } from '../stores/cartStore'
+const cartStore = useCartStore()
 const { carrinho, aumentar, diminuir, remover, limpar, total } = cartStore
 
 onMounted(() => {
   cartStore.carregarCarrinho()
 })
+
 </script>
 
 <template>
-  <SearchBar />
+
 
   <div class="mainCart">
     <h1>Carrinho</h1>
@@ -32,7 +32,7 @@ onMounted(() => {
         <div class="atributos">
           <h2>{{ item.titulo }}</h2>
           <p>{{ item.empresa }}</p>
-          <p>R$ {{ item.preco.toFixed(2) }}</p>
+          <p>R$ {{ item.preco }}</p>
         </div>
       </div>
       <div class="buttons">
