@@ -48,7 +48,7 @@ export const useCartStore = defineStore('cart', () => {
     localStorage.removeItem('carrinho')
   }
 
-  const total = computed(() =>
+  const total =  computed(() =>
     carrinho.value.reduce((soma, item) => soma + item.preco * item.quantidade, 0).toFixed(2)
   )
 
