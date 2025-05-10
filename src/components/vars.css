@@ -1,0 +1,14 @@
+:root{
+    /* FONT */
+    --font-nunito: "Nunito";
+    --font-roboto: "Roboto";
+
+    /* COLORS */
+    --invincible-white: #e1ebed;
+    --invincible-black:#303539;
+    --invincible-off-black:#404040;
+    --invincible-yellow:#ffe556;
+    --invincible-blue:#00bcf0;
+    --invincible-red: #c8412d;
+    --invincible-green: #15772d;
+}

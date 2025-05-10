@@ -1,23 +1,10 @@
 <script setup>
-import SearchBar from './components/SearchBar.vue';
-import bestSell from './components/bestSell.vue';
-
-
+import SearchBar from './components/SearchBar.vue'
 </script>
+
 <template>
-  <header>
-    <SearchBar/>
-  </header>
-  <bestSell/>
-  <hr>
-
-
-
-
-
-
-
+  <div id="app">
+    <SearchBar />
+    <router-view />
+  </div>
 </template>
-<style scoped>
-
-</style>
