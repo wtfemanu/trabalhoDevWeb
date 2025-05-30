@@ -24,8 +24,14 @@ export const useCartStore = defineStore('cart', () => {
     salvar()
   }
 
-  const aumentar = (produto) => {
-    produto.quantidade++
+  const aumentar = (id) => {
+    console.log('Aumentando quantidade do produto:', id)
+    const index = carrinho.value.findIndex(p => p.id === id)
+    console.log('Aumentando index:', index)
+    console.log('Carrinho antes de aumentar:', carrinho.value)
+    carrinho.value[index].quantidade++
+    console.log('Carrinho depois de aumentar:', carrinho.value)
+    // produto.quantidade++
     salvar()
   }
 
@@ -52,7 +58,7 @@ export const useCartStore = defineStore('cart', () => {
     carrinho.value.reduce((soma, item) => soma + item.preco * item.quantidade, 0).toFixed(2)
   )
 
-  // Carrega o carrinho inicialmente
+
   carregarCarrinho()
 
   return {
